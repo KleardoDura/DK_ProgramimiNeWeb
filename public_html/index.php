@@ -73,7 +73,7 @@
         <section id="banner" class="section-m1">
             <h4>Repair Services</h4>
             <h2><span>Free</span> Shipping</h2>
-            <button class="normal"><a href="shop.html">Explore More</a></button>
+            <button class="normal"><a href="shop.php">Explore More</a></button>
 
 
         </section>

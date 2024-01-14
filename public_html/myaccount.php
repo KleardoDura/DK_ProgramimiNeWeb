@@ -2,7 +2,17 @@
  	session_start();
 	if(!isset($_SESSION['userid']))
 		header("location:login.php");
-           
+    require("connection.php");
+	$userId=(int) $_SESSION['userid'];
+	$sql="SELECT * FROM user WHERE id=$userId";
+	$result=mysqli_query($con,$sql);
+	if(!$result){
+		echo "Error: " . mysqli_error($con);
+        die();
+	}
+	$row=mysqli_fetch_array($result);
+	$points=$row['points'];
+
         
 ?>
 <!DOCETYPE html>
@@ -56,7 +66,7 @@
 					</tr>
 					<tr>
 						<td><strong>Total Points:</strong></td>
-						<td><strong><?php echo $_SESSION['points'] ?></strong></td>
+						<td><strong><?php echo $points ?></strong></td>
 					</tr>
 
 				</table>

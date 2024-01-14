@@ -99,7 +99,7 @@ function quantityChanged(event,i){
      //E kemi objekt duhet ta kalojme ne array qe te heqim elementin me index i
 
      let entries = Object.entries(cartItems);
-    if(input.value>entries[i][1].quantity){
+    if(parseInt(input.value) > parseInt(entries[i][1].quantity)){
         input.value=entries[i][1].quantity;
         Swal.fire({
             icon: 'info',

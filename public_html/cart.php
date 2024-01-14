@@ -175,7 +175,6 @@
 		?>
 
 		<script src="cart.js"></script>
-		<script src="search.js"></script>
 	</body>
 
 

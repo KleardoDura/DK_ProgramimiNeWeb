@@ -142,8 +142,11 @@ function showMyComment(){
             `;
              myCommentStyle();
             }
-            else myCommentRef.innerHTML=` `;
-            
+            else {
+                myCommentRef.innerHTML=` `;
+                myCommentRef.innerHTML=`<p style="color:red;"}>
+                Sorry, but a purchase is required to leave a comment on this product.</p> `
+            }
             
         },
         error(err){
